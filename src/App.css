@@ -1,6 +1,12 @@
 .header {
-  height: 140px;
+  height: 80px;
   width: 100%;
   overflow: hidden;
   background-color: #121220;
+}
+
+.headerTitle {
+  color: #3358ff;
+  font-size: 70px;
+  vertical-align: middle;
 }
