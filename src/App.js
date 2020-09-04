@@ -6,18 +6,21 @@ import './App.css'
 import Footer from './components/Footer'
 import Header from './components/Header'
 
-// const Main = () => (
-// 	<main>
-// 		<Switch>
+const Main = () => (
+	<main>
+		<Switch>
 
-// 		</Switch>
-// 	</main>
-// )
+		</Switch>
+	</main>
+)
 
 function App() {
 	return (
 		<div className="container">
 			<Header />
+			<div className="mainWindow">
+				<Main />
+			</div>
 			<Footer />
 		</div>
 	)
