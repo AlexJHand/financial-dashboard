@@ -10,19 +10,34 @@ export default class HomePage extends React.Component {
         }
 
         this.getDia = this.getDia.bind(this)
+        this.getSpy = this.getSpy.bind(this)
     }
 
     componentDidMount() {
         console.log("componentDidMount")
         this.getDia()
+        this.getSpy()
     }
 
     getDia() {
-        console.log(`getDia ${process.env.REACT_APP_TIINGO_TOKEN}`)
         const options = {
             method: 'get',
             url: 'https://api.tiingo.com/tiingo/daily/dia/prices',
-            authorization: `Token ${process.env.REACT_APP_TIINGO_TOKEN}`
+            headers: {
+                authorization: `Token ${process.env.REACT_APP_TIINGO_TOKEN}`
+            }
+        }
+        axios(options)
+            .then(results => console.log("results -> ", results))
+    }
+
+    getSpy() {
+        const options = {
+            method: 'get',
+            url: 'https://api.tiingo.com/tiingo/daily/spy/prices',
+            headers: {
+                authorization: `Token ${process.env.REACT_APP_TIINGO_TOKEN}`
+            }
         }
         axios(options)
             .then(results => console.log("results -> ", results))
