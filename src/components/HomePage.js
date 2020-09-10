@@ -16,6 +16,7 @@ export default class HomePage extends React.Component {
     componentDidMount() {
         console.log("componentDidMount")
         this.getDia()
+        this.getQQQ()
         this.getSpy()
     }
 
@@ -23,6 +24,18 @@ export default class HomePage extends React.Component {
         const options = {
             method: 'get',
             url: 'https://api.tiingo.com/tiingo/daily/dia/prices',
+            headers: {
+                authorization: `Token ${process.env.REACT_APP_TIINGO_TOKEN}`
+            }
+        }
+        axios(options)
+            .then(results => console.log("results -> ", results))
+    }
+
+    getQQQ() {
+        const options = {
+            method: 'get',
+            url: 'https://api.tiingo.com/tiingo/daily/qqq/prices',
             headers: {
                 authorization: `Token ${process.env.REACT_APP_TIINGO_TOKEN}`
             }
