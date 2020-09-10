@@ -6,10 +6,13 @@ export default class HomePage extends React.Component {
         super(props)
 
         this.state = {
-            dia: ""
+            dia: "",
+            qqq: "",
+            spy: ""
         }
 
         this.getDia = this.getDia.bind(this)
+        this.getQQQ = this.getQQQ.bind(this)
         this.getSpy = this.getSpy.bind(this)
     }
 
@@ -29,7 +32,7 @@ export default class HomePage extends React.Component {
             }
         }
         axios(options)
-            .then(results => console.log("results -> ", results))
+            .then(results => this.setState({ dia: results }))
     }
 
     getQQQ() {
@@ -41,7 +44,7 @@ export default class HomePage extends React.Component {
             }
         }
         axios(options)
-            .then(results => console.log("results -> ", results))
+            .then(results => this.setState({ qqq: results }))
     }
 
     getSpy() {
@@ -53,10 +56,11 @@ export default class HomePage extends React.Component {
             }
         }
         axios(options)
-            .then(results => console.log("results -> ", results))
+            .then(results => this.setState({ spy: results }))
     }
 
     render () {
+        console.log('this.state', this.state)
         return (
             <div>
 
