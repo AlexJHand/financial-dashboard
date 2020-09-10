@@ -12,7 +12,7 @@ export default class HomePage extends React.Component {
         }
 
         this.getDia = this.getDia.bind(this)
-        this.getQQQ = this.getQQQ.bind(this)
+        this.getQqq = this.getQqq.bind(this)
         this.getSpy = this.getSpy.bind(this)
     }
 
@@ -35,7 +35,7 @@ export default class HomePage extends React.Component {
             .then(results => this.setState({ dia: results }))
     }
 
-    getQQQ() {
+    getQqq() {
         const options = {
             method: 'get',
             url: 'https://api.tiingo.com/tiingo/daily/qqq/prices',
