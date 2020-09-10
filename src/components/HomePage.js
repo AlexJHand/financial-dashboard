@@ -19,7 +19,7 @@ export default class HomePage extends React.Component {
     componentDidMount() {
         console.log("componentDidMount")
         this.getDia()
-        this.getQQQ()
+        this.getQqq()
         this.getSpy()
     }
 
@@ -32,7 +32,7 @@ export default class HomePage extends React.Component {
             }
         }
         axios(options)
-            .then(results => this.setState({ dia: results }))
+            .then(results => this.setState({ dia: results.data[0] }))
     }
 
     getQqq() {
@@ -44,7 +44,7 @@ export default class HomePage extends React.Component {
             }
         }
         axios(options)
-            .then(results => this.setState({ qqq: results }))
+            .then(results => this.setState({ qqq: results.data[0] }))
     }
 
     getSpy() {
@@ -56,14 +56,29 @@ export default class HomePage extends React.Component {
             }
         }
         axios(options)
-            .then(results => this.setState({ spy: results }))
+            .then(results => this.setState({ spy: results.data[0] }))
     }
 
     render () {
         console.log('this.state', this.state)
+        let diaData = this.state.dia
+        let qqqData = this.state.qqq
+        let spyData = this.state.spy
+        if (this.state.dia !== "") {
+            diaData = this.state.dia.close
+        }
+        if (this.state.qqq !== "") {
+            qqqData = this.state.qqq.close
+        }
+        if (this.state.spy !== "") {
+            spyData = this.state.spy.close
+        }
+
         return (
             <div>
-
+                <div className="diaDiv">{diaData}</div>
+                <div className="qqqDiv">{qqqData}</div>
+                <div className="spyDiv">{spyData}</div>
             </div>
         )
     }
