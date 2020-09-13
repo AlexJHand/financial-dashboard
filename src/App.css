@@ -1,3 +1,13 @@
+.container {
+  position: relative;
+  min-height: 100vh;
+  background-color: #222440;
+}
+
+.mainWindow {
+  padding-bottom: 2.5rem;
+}
+
 .header {
   height: 80px;
   width: 100%;
@@ -10,3 +20,30 @@
   font-size: 70px;
   vertical-align: middle;
 }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  background-color: #121220;
+  color: #3358ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright {
+  color: #3358ff;
+}
+
+.contact {
+  color: #3358ff;
+  margin-left: 200px;
+}
+
+.contactLink {
+  text-decoration: none;
+  color: #67a832;
+}
+
