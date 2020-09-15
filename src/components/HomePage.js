@@ -96,7 +96,7 @@ export default class HomePage extends React.Component {
 
         console.log(`diaData ${diaData.close} ${diaData.difference}`)
         return (
-            <div>
+            <div className='homePage'>
                 <div className="diaDiv">{`${diaData.close} - ${diaData.difference}`}</div>
                 <div className="qqqDiv">{`${qqqData.close} - ${qqqData.difference}`}</div>
                 <div className="spyDiv">{`${spyData.close} - ${spyData.difference}`}</div>

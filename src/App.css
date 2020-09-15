@@ -8,6 +8,13 @@
   padding-bottom: 2.5rem;
 }
 
+.homePage {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
 .header {
   height: 80px;
   width: 100%;
