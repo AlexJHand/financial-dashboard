@@ -97,9 +97,18 @@ export default class HomePage extends React.Component {
         console.log(`diaData ${diaData.close} ${diaData.difference}`)
         return (
             <div className='homePage'>
-                <div className="homeDataDiv" id="diaDiv">{`${diaData.close} - ${diaData.difference}`}</div>
-                <div className="homeDataDiv" id="qqqDiv">{`${qqqData.close} - ${qqqData.difference}`}</div>
-                <div className="homeDataDiv" id="spyDiv">{`${spyData.close} - ${spyData.difference}`}</div>
+                {diaData.difference > 0 ? 
+                    <div className="homeDataDiv positiveChange" id="diaDiv">{`${diaData.close} ${diaData.difference}`}</div> :
+                    <div className="homeDataDiv negativeChange" id="diaDiv">{`${diaData.close} ${diaData.difference}`}</div>
+                }
+                {qqqData.difference > 0 ?
+                    <div className="homeDataDiv positiveChange" id="qqqDiv">{`${qqqData.close} ${qqqData.difference}`}</div> :
+                    <div className="homeDataDiv negativeChange" id="qqqDiv">{`${qqqData.close} ${qqqData.difference}`}</div>
+                }
+                {spyData.difference > 0 ?
+                    <div className="homeDataDiv positiveChange" id="spyDiv">{`${spyData.close} ${spyData.difference}`}</div> :
+                    <div className="homeDataDiv negativeChange" id="spyDiv">{`${spyData.close} ${spyData.difference}`}</div>
+                }
             </div>
         )
     }

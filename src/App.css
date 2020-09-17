@@ -23,6 +23,14 @@
   height: 100%;
 }
 
+.positiveChange {
+  color: #67a832;
+}
+
+.negativeChange {
+  color: #cd5d59;
+}
+
 .header {
   height: 80px;
   width: 100%;
