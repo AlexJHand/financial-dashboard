@@ -6,10 +6,7 @@ export default class HomePage extends React.Component {
         super(props)
 
         this.state = {
-            dia: {
-                close: "",
-                difference: ""
-            },
+            dia: "",
             qqq: "",
             spy: ""
         }
