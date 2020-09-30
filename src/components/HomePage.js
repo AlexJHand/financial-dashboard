@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import AverageCard from './AverageCard'
 
 export default class HomePage extends React.Component {
     constructor(props) {
@@ -94,10 +95,11 @@ export default class HomePage extends React.Component {
         console.log(`diaData ${diaData.close} ${diaData.difference}`)
         return (
             <div className='homePage'>
-                {diaData.difference > 0 ? 
+                {/* {diaData.difference > 0 ? 
                     <div className="homeDataDiv positiveChange" id="diaDiv">{`${diaData.close} ${diaData.difference}`}</div> :
                     <div className="homeDataDiv negativeChange" id="diaDiv">{`${diaData.close} ${diaData.difference}`}</div>
-                }
+                } */}
+                <AverageCard title="DIA" close={diaData.close} difference={diaData.difference} />
                 {qqqData.difference > 0 ?
                     <div className="homeDataDiv positiveChange" id="qqqDiv">{`${qqqData.close} ${qqqData.difference}`}</div> :
                     <div className="homeDataDiv negativeChange" id="qqqDiv">{`${qqqData.close} ${qqqData.difference}`}</div>
