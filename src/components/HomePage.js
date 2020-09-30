@@ -100,14 +100,16 @@ export default class HomePage extends React.Component {
                     <div className="homeDataDiv negativeChange" id="diaDiv">{`${diaData.close} ${diaData.difference}`}</div>
                 } */}
                 <AverageCard title="DIA" close={diaData.close} difference={diaData.difference} />
-                {qqqData.difference > 0 ?
+                {/* {qqqData.difference > 0 ?
                     <div className="homeDataDiv positiveChange" id="qqqDiv">{`${qqqData.close} ${qqqData.difference}`}</div> :
                     <div className="homeDataDiv negativeChange" id="qqqDiv">{`${qqqData.close} ${qqqData.difference}`}</div>
-                }
-                {spyData.difference > 0 ?
+                } */}
+                <AverageCard title="QQQ" close={qqqData.close} difference={qqqData.difference} />
+                {/* {spyData.difference > 0 ?
                     <div className="homeDataDiv positiveChange" id="spyDiv">{`${spyData.close} ${spyData.difference}`}</div> :
                     <div className="homeDataDiv negativeChange" id="spyDiv">{`${spyData.close} ${spyData.difference}`}</div>
-                }
+                } */}
+                <AverageCard title="SPY" close={spyData.close} difference={spyData.difference} />
             </div>
         )
     }
