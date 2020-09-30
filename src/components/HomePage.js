@@ -78,37 +78,15 @@ export default class HomePage extends React.Component {
 
     render () {
         console.log('this.state', this.state)
-        // let diaData = this.state.dia
         let diaData = this.formatCloseInfo(this.state.dia)
         let qqqData = this.formatCloseInfo(this.state.qqq)
         let spyData = this.formatCloseInfo(this.state.spy)
-        // if (this.state.dia !== "") {
-        //     diaData = this.state.dia.close
-        // }
-        // if (this.state.qqq !== "") {
-        //     qqqData = this.state.qqq.close
-        // }
-        // if (this.state.spy !== "") {
-        //     spyData = this.state.spy.close
-        // }
 
         console.log(`diaData ${diaData.close} ${diaData.difference}`)
         return (
             <div className='homePage'>
-                {/* {diaData.difference > 0 ? 
-                    <div className="homeDataDiv positiveChange" id="diaDiv">{`${diaData.close} ${diaData.difference}`}</div> :
-                    <div className="homeDataDiv negativeChange" id="diaDiv">{`${diaData.close} ${diaData.difference}`}</div>
-                } */}
                 <AverageCard title="DIA" close={diaData.close} difference={diaData.difference} />
-                {/* {qqqData.difference > 0 ?
-                    <div className="homeDataDiv positiveChange" id="qqqDiv">{`${qqqData.close} ${qqqData.difference}`}</div> :
-                    <div className="homeDataDiv negativeChange" id="qqqDiv">{`${qqqData.close} ${qqqData.difference}`}</div>
-                } */}
                 <AverageCard title="QQQ" close={qqqData.close} difference={qqqData.difference} />
-                {/* {spyData.difference > 0 ?
-                    <div className="homeDataDiv positiveChange" id="spyDiv">{`${spyData.close} ${spyData.difference}`}</div> :
-                    <div className="homeDataDiv negativeChange" id="spyDiv">{`${spyData.close} ${spyData.difference}`}</div>
-                } */}
                 <AverageCard title="SPY" close={spyData.close} difference={spyData.difference} />
             </div>
         )
