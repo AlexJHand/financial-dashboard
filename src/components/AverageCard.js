@@ -17,10 +17,10 @@ export default class AverageCard extends React.Component {
                 <div className="averageData">
                     {this.props.difference > 0 ?
                         <div className="homeDataDiv positiveChange">{`${this.props.close} `}   
-                            <span class="averageArrow">{`\u25B2`}</span>
+                            <span className="averageArrow">{`\u25B2`}</span>
                         {this.props.difference}</div> :
                         <div className="homeDataDiv negativeChange">{`${this.props.close} `}
-                            <span class="averageArrow">{`\u25BC`}</span>
+                            <span className="averageArrow">{`\u25BC`}</span>
                         {this.props.difference}</div>
                     }
                 </div>
@@ -28,6 +28,3 @@ export default class AverageCard extends React.Component {
         )
     }
 }
-
-
-{/* <div className="homeDataDiv positiveChange">{`${this.props.close}`} &#9650; {`${this.props.difference}`}</div> */}
