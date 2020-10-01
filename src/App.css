@@ -76,3 +76,9 @@
   color: #67a832;
 }
 
+.averageCard {
+  border: 5px solid #3358ff;
+  width: 80%;
+  margin: 8px;
+  /* background-color: tomato; */
+}

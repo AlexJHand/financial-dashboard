@@ -12,7 +12,7 @@ export default class AverageCard extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="averageCard">
                 <div className="averageTitle">{this.props.title}</div>
                 <div className="averageData">
                     {this.props.difference > 0 ?
