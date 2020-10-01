@@ -77,8 +77,25 @@
 }
 
 .averageCard {
-  border: 5px solid #3358ff;
+  border: 3px solid #3358ff;
+  border-radius: 5px;
   width: 80%;
   margin: 8px;
   /* background-color: tomato; */
 }
+
+.averageTitle {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 550;
+}
+
+.averageData {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 450;
+}
+
+ .averageArrow {
+   font-size: 35px;
+ }
